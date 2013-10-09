@@ -9,6 +9,7 @@
 #import <ArcGIS/ArcGIS.h>
 #import "AGSProcessedTiledMapServiceLayer.h"
 #import "AGSPrecacheTiledServiceLayer.h"
+#import "AGSLODLimitedTiledLayer.h"
 
 @interface SampleViewController () <AGSMapViewLayerDelegate>
 @property (weak, nonatomic) IBOutlet AGSMapView *mapView;
@@ -16,6 +17,7 @@
 
 typedef enum
 {
+    AGSCustomTileLayerTypeLODLimited,
     AGSCustomTileLayerTypeCoreImageProcessed,
     AGSCustomTileLayerTypePrecached
 } AGSCustomTileLayerType;
@@ -44,6 +46,12 @@ typedef enum
     for (id sourceLayer in sourceLayers) {
         id wrappedLayer = nil;
         switch (sampleType) {
+            case AGSCustomTileLayerTypeLODLimited:
+                wrappedLayer = [AGSLODLimitedTiledLayer lodLimitedTiledMapServiceLayer:sourceLayer
+                                                                          fromLODLevel:4
+                                                                            toLODLevel:10];
+                break;
+                
             case AGSCustomTileLayerTypeCoreImageProcessed:
                 wrappedLayer = [[AGSProcessedTiledMapServiceLayer alloc] initWithTiledLayer:sourceLayer
                                                                    processingTilesWithBlock:[AGSProcessedTiledMapServiceLayer sepiaBlockWithIntensity:1.0]];

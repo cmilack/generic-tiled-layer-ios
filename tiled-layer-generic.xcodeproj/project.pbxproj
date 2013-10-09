@@ -13,6 +13,7 @@
 		D95F921616F214870007D7F5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95F921516F214870007D7F5 /* OpenGLES.framework */; };
 		D9A82DEC17FB808C001CE86E /* AGSPrecacheTiledServiceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A82DEB17FB808C001CE86E /* AGSPrecacheTiledServiceLayer.m */; };
 		D9F11CA71806004300A15C07 /* AGSGenericTileOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F11CA61806004300A15C07 /* AGSGenericTileOperation.m */; };
+		D9F11CAA18060CA300A15C07 /* AGSLODLimitedTiledLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F11CA918060CA300A15C07 /* AGSLODLimitedTiledLayer.m */; };
 		E169807B16387B6C00A1F2E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E169807A16387B6C00A1F2E5 /* UIKit.framework */; };
 		E169807D16387B6C00A1F2E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E169807C16387B6C00A1F2E5 /* Foundation.framework */; };
 		E169807F16387B6C00A1F2E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E169807E16387B6C00A1F2E5 /* CoreGraphics.framework */; };
@@ -45,6 +46,8 @@
 		D9A82DEB17FB808C001CE86E /* AGSPrecacheTiledServiceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSPrecacheTiledServiceLayer.m; sourceTree = "<group>"; };
 		D9F11CA51806004300A15C07 /* AGSGenericTileOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSGenericTileOperation.h; sourceTree = "<group>"; };
 		D9F11CA61806004300A15C07 /* AGSGenericTileOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSGenericTileOperation.m; sourceTree = "<group>"; };
+		D9F11CA818060CA300A15C07 /* AGSLODLimitedTiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSLODLimitedTiledLayer.h; sourceTree = "<group>"; };
+		D9F11CA918060CA300A15C07 /* AGSLODLimitedTiledLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSLODLimitedTiledLayer.m; sourceTree = "<group>"; };
 		E169807616387B6C00A1F2E5 /* tiled-layer-generic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tiled-layer-generic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E169807A16387B6C00A1F2E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E169807C16387B6C00A1F2E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +117,15 @@
 			name = "Pre-cached Layer";
 			sourceTree = "<group>";
 		};
+		D9F11CAB18060CB800A15C07 /* LOD Limited Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D9F11CA818060CA300A15C07 /* AGSLODLimitedTiledLayer.h */,
+				D9F11CA918060CA300A15C07 /* AGSLODLimitedTiledLayer.m */,
+			);
+			name = "LOD Limited Layer";
+			sourceTree = "<group>";
+		};
 		E169806B16387B6C00A1F2E5 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +168,7 @@
 			children = (
 				D9F11CA51806004300A15C07 /* AGSGenericTileOperation.h */,
 				D9F11CA61806004300A15C07 /* AGSGenericTileOperation.m */,
+				D9F11CAB18060CB800A15C07 /* LOD Limited Layer */,
 				D9F11CA31805F4DB00A15C07 /* Core Image Processed Layer */,
 				D9F11CA41805F4E800A15C07 /* Pre-cached Layer */,
 				E169808916387B6C00A1F2E5 /* SampleAppDelegate.h */,
@@ -259,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9F11CA71806004300A15C07 /* AGSGenericTileOperation.m in Sources */,
+				D9F11CAA18060CA300A15C07 /* AGSLODLimitedTiledLayer.m in Sources */,
 				E169808716387B6C00A1F2E5 /* main.m in Sources */,
 				E169808B16387B6C00A1F2E5 /* SampleAppDelegate.m in Sources */,
 				E169809A16387B6C00A1F2E5 /* SampleViewController.m in Sources */,
