@@ -27,6 +27,12 @@ typedef enum
 #define kImageryUrl @"http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
 #define kImageryRefURL @"http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer"
 
+// START: Specific to the 10/11/2013 daily Build
+@interface AGSTiledLayer (TileAnimation)
+@property (nonatomic, assign, readwrite) BOOL allowAnimation;
+@end
+// END: Specific
+
 @implementation SampleViewController
 - (void)viewDidLoad
 {
@@ -51,6 +57,9 @@ typedef enum
                 
             case AGSCustomTileLayerTypePrecached:
                 wrapperLayer = [[AGSPrecacheTiledServiceLayer alloc] initWithTiledLayer:sourceLayer];
+                // START: Specific to the 10/11/2013 daily Build
+                wrapperLayer.allowAnimation = NO;
+                // END: Specific
                 break;
         }
         [wrapperLayers addObject:wrapperLayer];
